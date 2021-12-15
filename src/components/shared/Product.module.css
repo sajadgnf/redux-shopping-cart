@@ -1,85 +1,104 @@
 .container {
-    width: calc(100% / 4);
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.product {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid silver;
     border-radius: 10px;
     background-color: #fff;
-    width: 100%;
-    height: 95%;
-    padding: 20px;
+    transition: all 0.2s ease;
+    margin: 0 10px 50px;
+}
+
+.container:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cardImage {
+    width: 230px;
+    height: 200px;
     margin: 10px;
 }
 
-.product:hover {
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-}
-
-.imgContainer {
-    width: 100%;
-    height: 50%;
-}
-
-.imgContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.content {
+.container h3 {
+    color: #404040;
     text-align: left;
-    margin-top: 40px;
-    font-size: 15px;
+    margin: 25px 20px 15px;
 }
 
-.content p {
-    margin-top: 8px;
-    font-size: 14px;
+.container p {
+    color: #404040;
+    text-align: left;
+    margin: 15px 20px;
 }
 
-.btns {
+.linkContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin: 25px 20px 20px;
 }
 
-.btns a {
-    color: rgb(56, 102, 253);
+.linkContainer a {
+    color: #1a73e8;
+    text-decoration: none;
 }
 
-.buyBtns {
-    display: flex;
-}
-
-.buyBtns button {
+.buttonContainer button {
     border: none;
     outline: none;
     border-radius: 5px;
-    background-color: rgb(56, 102, 253);
+    background-color: #1a73e8;
     color: #fff;
     width: 30px;
     height: 28px;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-left: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 4px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 0 5px;
     font-size: 20px;
     font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.buttonContainer button:hover {
+    background-color: #0b499b;
 }
 
 .addBtn {
     height: 28px;
-    width: 100px !important;
+    width: 120px !important;
     font-size: 13px !important;
     font-weight: lighter !important;
 }
 
-.trashIcon {
-    width: 15px;
-    height: 15px;
+.counter {
+    color: #1a73e8;
+    font-weight: 700;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1010px) {
+    .container {
+        width: 45%;
+    }
+}
+
+@media (max-width: 770px) {
+    .cardImage {
+        width: 70%;
+    }
+}
+
+@media (max-width: 555px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
 }

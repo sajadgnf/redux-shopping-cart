@@ -2,6 +2,8 @@ import React, { useContext } from "react"
 
 // components
 import Product from "./shared/Product"
+
+// style
 import styles from "./Store.module.css"
 
 // context
