@@ -7,7 +7,12 @@ import styles from "./ProductDetails.module.css"
 // context
 import { ProductsContext } from "../context/ProductsContextProvider"
 
+// funcion
+import { useTitle } from '../helper/functions';
+
 const ProductDetails = () => {
+
+    useTitle("ProductDetails")
 
     const params = useParams()
     const id = params.id

@@ -9,7 +9,13 @@ import styles from "./Store.module.css"
 // context
 import { ProductsContext } from "../context/ProductsContextProvider"
 
+// funcion
+import { useTitle } from "../helper/functions"
+
 const Store = () => {
+
+    useTitle("Store")
+
     const products = useContext(ProductsContext)
 
     return (

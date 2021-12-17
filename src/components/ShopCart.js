@@ -8,7 +8,13 @@ import Cart from "./shared/Cart"
 // context
 import { CartContext } from "../context/CartContextProvider"
 
+// function
+import { useTitle } from "../helper/functions"
+
 const ShopCart = () => {
+
+    useTitle("Cart")
+
     const { state, dispatch } = useContext(CartContext)
 
     return (
