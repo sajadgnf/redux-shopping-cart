@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import axios from 'axios'
 
 // style
 import styles from "./ProductDetails.module.css"
 
-// context
-import { ProductsContext } from "../context/ProductsContextProvider"
 
 // funcion
 import { useTitle } from '../helper/functions';
@@ -16,16 +15,14 @@ const ProductDetails = () => {
 
     const params = useParams()
     const id = params.id
-    const data = useContext(ProductsContext)
-    const product = data[id - 1]
     
     // get prudoct from api
-    // const [product, setProduct] = useState({})
-    // useEffect(() => {
-    //     axios.get(`https://fakestoreapi.com/products/${id}`)
-    //     .then(response => setProduct(response.data))
-    //     
-    // },[])
+    const [product, setProduct] = useState({})
+    useEffect(() => {
+        axios.get(`https://fakestoreapi.com/products/${id}`)
+        .then(response => setProduct(response.data))
+        
+    },[])
     
     const { image, title, price, category, description } = product
 
