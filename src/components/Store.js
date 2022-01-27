@@ -16,11 +16,17 @@ const Store = () => {
 
     useTitle("Store")
 
-    const products = useContext(ProductsContext)
+
+
+    const { products, loading } = useContext(ProductsContext)
 
     return (
         <div className={styles.container}>
-            {products.map(product => <Product key={product.id} productData={product} />)}
+            {
+                loading ?
+                    <p className={styles.loading}></p> :
+                    products.map(product => <Product key={product.id} productData={product} />)
+            }
         </div>
     )
 
