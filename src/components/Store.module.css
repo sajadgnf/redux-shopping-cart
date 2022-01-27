@@ -7,24 +7,6 @@
     padding: 0 150px;
 }
 
-.loading {
-    border: 3px solid silver;
-    border-top-color: rgb(67, 164, 255);
-    border-radius: 50%;
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    width: 100px;
-    height: 100px;
-    animation: spinner .5s linear infinite;
-}
-
-@keyframes spinner {
-    to{
-        transform: rotate(360deg);
-    }
-}
-
 @media (max-width: 1200px) {
     .container {
         padding: 0 80px;
@@ -42,8 +24,5 @@
     .container {
         justify-content: center;
         padding: 0 10px;
-    }
-    .loading{
-        left: 40%;
     }
 }

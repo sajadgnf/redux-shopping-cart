@@ -24,7 +24,7 @@ const Store = () => {
         <div className={styles.container}>
             {
                 loading ?
-                    <p className={styles.loading}></p> :
+                    <p className='loading'></p> :
                     products.map(product => <Product key={product.id} productData={product} />)
             }
         </div>
