@@ -10,25 +10,18 @@ body {
 }
 
 .loading {
-  border: 3px solid silver;
-  border-top-color: rgb(67, 164, 255);
-  border-radius: 50%;
-  position: absolute;
-  top: 45%;
-  left: 45%;
   width: 100px;
   height: 100px;
-  animation: spinner 0.5s linear infinite;
+  border: 3px solid silver;
+  border-top-color: rgb(67, 164, 255);
+  animation: spinner 0.5s infinite linear;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 18rem;
 }
 
 @keyframes spinner {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 555px) {
-  .loading {
-    left: 40%;
   }
 }
