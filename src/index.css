@@ -17,7 +17,7 @@ body {
   animation: spinner 0.5s infinite linear;
   border-radius: 50%;
   margin: auto;
-  margin-top: 18rem;
+  margin-top: 16rem;
 }
 
 @keyframes spinner {

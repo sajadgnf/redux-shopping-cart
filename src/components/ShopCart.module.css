@@ -22,6 +22,7 @@
 .paymentFild p {
     margin-bottom: 20px;
     color: rgb(61, 61, 61);
+    font-weight: bold;
 }
 
 .paymentFild p span {
@@ -47,6 +48,11 @@
 .btns button:first-child {
     color: #00a308;
     font-size: 15px;
+    font-weight: bold;
+}
+
+.btns button:last-child:hover {
+    color: #167d32;
 }
 
 .btns button:last-child {
@@ -57,6 +63,7 @@
         rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 9px 16px;
     border-radius: 5px;
     color: #fff;
+    transition: all 0.3s ease;
 }
 
 .btns button:last-child:hover {
@@ -92,7 +99,7 @@
 @media (max-width: 1050px) {
     .container {
         flex-direction: column-reverse;
-          align-items: center;
+        align-items: center;
     }
 
     .paymentFild {
@@ -106,13 +113,13 @@
 }
 
 @media (max-width: 769px) {
-    .container{
-          margin: 120px 40px 50px;
+    .container {
+        margin: 120px 40px 50px;
     }
 }
 
 @media (max-width: 555px) {
     .container {
-          margin: 120px 20px 50px;
+        margin: 120px 20px 50px;
     }
 }
