@@ -51,8 +51,8 @@
     font-weight: bold;
 }
 
-.btns button:last-child:hover {
-    color: #167d32;
+.btns button:first-child:hover {
+    color: #2f974b;
 }
 
 .btns button:last-child {
