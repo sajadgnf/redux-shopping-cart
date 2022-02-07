@@ -1,14 +1,15 @@
-import React, { useContext } from "react"
+import React from "react"
 import styles from "./Navbar.module.css"
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // icon
 import shop from "../../assets/icons/shop.svg"
 
-import { CartContext } from "../../context/CartContextProvider";
-
 const Navbar = () => {
-    const { state } = useContext(CartContext)
+
+    const state = useSelector(state => state.cartState)
+
     return (
         <div className={styles.container}>
             <Link className={styles.productLink} to="/products">Products</Link>
